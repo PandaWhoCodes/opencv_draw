@@ -5,6 +5,9 @@ import numpy as np
 Lower_blue = np.array([110, 50, 50])
 Upper_blue = np.array([130, 255, 255])
 
+def brighten(data, b):
+    datab = data * b
+    return datab
 
 def get_contours(img):
     imgHSV = cv2.cvtColor(img, cv2.COLOR_BGR2HSV)
@@ -63,7 +66,7 @@ def run():
             reset_blackbaord(pts, blackboard)
             pts = deque(maxlen=512)
             blackboard = np.zeros((480, 640, 3), dtype=np.uint8)
-        cv2.imshow("Frame", img)
+        cv2.imshow("Frame", brighten(img,1))
         k = cv2.waitKey(1)
         if k == 27:
             break
