@@ -4,4 +4,4 @@
 Current color tracking is done on the color blue.
 
 # Demo
-![Demo](https://media.giphy.com/media/vFKqnCdLPNOKc/giphy.gif)
+![Demo](https://github.com/PandaWhoCodes/opencv_draw/raw/master/demo.gif)
